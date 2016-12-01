@@ -70,10 +70,7 @@ public class Client {
 			connection.setRequestProperty("Authorization", "Bearer " + config.getBearerToken());
 			connection.setUseCaches(false);
 				
-				
-			// Parse the JSON response into a JSON mapped object to fetch fields from.
 			JSONArray obj = (JSONArray)JSONValue.parse(CommHelpers.readResponse(connection));
-				
 			if (obj != null) {
 				String tweet = ((JSONObject)obj.get(0)).get("text").toString();
 				
