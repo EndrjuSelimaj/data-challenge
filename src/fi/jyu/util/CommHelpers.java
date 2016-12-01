@@ -10,7 +10,6 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class CommHelpers {
 	
-	// Writes a request to a connection
 	public static boolean writeRequest(HttpsURLConnection connection, String textBody) {
 		try {
 			BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream()));
@@ -23,7 +22,6 @@ public class CommHelpers {
 		catch (IOException e) { return false; }
 	}
 		
-	// Reads a response for a given connection and returns it as a string.
 	public static String readResponse(HttpsURLConnection connection) {
 		try {
 			StringBuilder str = new StringBuilder();
