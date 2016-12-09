@@ -39,7 +39,7 @@ public class Client {
 			String results = "";
 			long maxId = 0;
 	
-			for (int i = 0; i < 10; i++) {
+			for (int i = 0; i < 100; i++) {
 				if (i > 0) request = "https://api.twitter.com/1.1/search/tweets.json?q=" 
 						+ URLEncoder.encode(keyword, "UTF-8") 
 						+ "&count=100" + "&geocode=" + geocode + "&lang=en&max_id=" + maxId;

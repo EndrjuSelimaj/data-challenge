@@ -13,7 +13,7 @@ public class App {
 		Config config = new Config();
 		Client client = null;
 		
-		args = new String[] {"search", "#Trump", "europe"};
+		//args = new String[] {"search", "#Trump", "europe"};
 		
 		if (args.length == 0) {
 			System.out.println("twelper.jar [config|test|search] <what to search> <geolocation with a radius>");
