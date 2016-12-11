@@ -13,10 +13,10 @@ public class App {
 		Config config = new Config();
 		Client client = null;
 		
-		//args = new String[] {"search", "#Trump", "europe"};
+		args = new String[] {"search", "#Trump", "usa"};
 		
 		if (args.length == 0) {
-			System.out.println("twelper.jar [config|test|search] <what to search> <geolocation with a radius>");
+			System.out.println("Provide a command: help, config, test or search.");
 			System.exit(0);
 		}
 		
@@ -55,14 +55,14 @@ public class App {
 					e.printStackTrace();
 				}				
 			} else {
-				System.out.println("Don't know what to search and from which location.");
+				System.out.println("Don't know what to search and from where.");
 			}
 			break;
 
 		default:
 			System.out.println("Usage");
-			System.out.println("twelper.jar <mode[config|test|search]> <search terms> <area[usa|europe]>");
-			System.out.println("Will fetch 1000 (or less) tweets based on the criteria.");
+			System.out.println("twelper.jar <help|config|test|search]> <search terms> <search area[usa|europe]>");
+			System.out.println("Will fetch 5000 English tweets based on the criteria (terms and area).");
 		}
 	}
 

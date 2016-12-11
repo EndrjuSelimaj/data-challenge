@@ -38,8 +38,9 @@ public class Client {
 			String response = "";
 			String results = "";
 			long maxId = 0;
+			int iterations = 50;
 	
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < iterations; i++) {
 				if (i > 0) request = "https://api.twitter.com/1.1/search/tweets.json?q=" 
 						+ URLEncoder.encode(keyword, "UTF-8") 
 						+ "&count=100" + "&geocode=" + geocode + "&lang=en&max_id=" + maxId;
@@ -68,7 +69,7 @@ public class Client {
 		
 				String tweets = response.substring(13, response.indexOf("\"search_metadata\":{")-1) + "}";
 				results += tweets.substring(0, tweets.length()-2);
-				if (i < 9) results += ",";
+				if (i < iterations-1) results += ",";
 			}
 			results = "[" + results + "]";
 			
